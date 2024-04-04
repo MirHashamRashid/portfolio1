@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebookF} from 'react-icons/fa'
 import { FiInstagram} from 'react-icons/fi'
 import { IoLogoTwitter} from 'react-icons/io'
+import { Link } from 'react-scroll'
 import './footer.css';
 const Footer = () => {
   return (
@@ -9,13 +10,13 @@ const Footer = () => {
       <a href='#home' className='footer__logo'>MirHasham Rashid</a>
 
       <ul className='permalinks'>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contacts</a></li>
+        <li><Link smooth={true} to="home">Home</Link></li>
+        <li><Link smooth={true} to="about">About</Link></li>
+        <li><Link smooth={true} to="experience">Experience</Link></li>
+        <li><Link smooth={true} to="services">Services</Link></li>
+        <li><Link smooth={true} to="portfolio">Portfolio</Link></li>
+        <li><Link smooth={true} to="testimonial">Testimonials</Link></li>
+        <li><Link smooth={true} to="contact">Contacts</Link></li>
       </ul>
 
       <div className='footer__social'>
@@ -25,7 +26,7 @@ const Footer = () => {
       </div>
 
       <div className='footer__copyright'>
-        <small>&copy; Rashid. All rights reserved.</small>
+        <small>&copy; Rashid. {new Date().getFullYear()} All rights reserved.</small>
       </div>
     </footer>
   )
